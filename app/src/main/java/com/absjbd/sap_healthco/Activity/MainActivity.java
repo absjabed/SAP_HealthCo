@@ -1,15 +1,22 @@
 package com.absjbd.sap_healthco.Activity;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-
+import android.widget.Button;
 import com.absjbd.sap_healthco.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Button oneBt;
+    private Button twoBt;
+    private Button threeBt;
+    private Button fourBt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +32,58 @@ public class MainActivity extends AppCompatActivity {
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
+
+       /* oneBt = (Button) findViewById(R.id.oneBt);
+
+        oneBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HospitalActivity.class);
+                startActivity(intent);
+            }
+        });
+*/
+        oneBt = (Button) findViewById(R.id.oneBt);
+        oneBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, HealthActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        twoBt = (Button) findViewById(R.id.twoBt);
+        twoBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,HospitalActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        threeBt = (Button) findViewById(R.id.threeBt);
+        threeBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, DoctorActivity.class);
+                intent.putExtra("doctorType", 0);
+                startActivity(intent);
+            }
+
+        });
+
+        fourBt = (Button) findViewById(R.id.fourBt);
+        fourBt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                startActivity(intent);
+            }
+
+        });
+
     }
+
+
 }
+

@@ -1,0 +1,53 @@
+package com.absjbd.sap_healthco.Model;
+
+/**
+ * Created by basha on 3/7/2018.
+ */
+
+public class DoctorModel {
+    private int id;
+    private String doctorName;
+    private String doctorDesignation;
+    private String doctorAddress;
+    private String doctorPhone;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDoctorName() {
+        return doctorName;
+    }
+
+    public void setDoctorName(String doctorName) {
+        this.doctorName = doctorName;
+    }
+
+    public String getDoctorDesignation() {
+        return doctorDesignation;
+    }
+
+    public void setDoctorDesignation(String doctorDesignation) {
+        this.doctorDesignation = doctorDesignation;
+    }
+
+    public String getDoctorAddress() {
+        return doctorAddress;
+    }
+
+    public void setDoctorAddress(String doctorAddress) {
+        this.doctorAddress = doctorAddress;
+    }
+
+    public String getDoctorPhone() {
+        return doctorPhone;
+    }
+
+    public void setDoctorPhone(String doctorPhone) {
+        this.doctorPhone = doctorPhone;
+    }
+}

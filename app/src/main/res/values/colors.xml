@@ -7,9 +7,15 @@
     <color name="skyBlue1">#64D8D7</color>
     <color name="darkWhite1">#DCD3D3</color>
     <color name="litePink">#FD6D78</color>
+    <color name="Pink">#f7bff3</color>
+    <color name="notPink">#f2bccd</color>
     <color name="pink">#F89CA1</color>
     <color name="darkWhite2">#B5A699</color>
     <color name="skyBlue2">#ADE5E7</color>
+    <color name="red">#f22607</color>
+    <color name="paste">#f0c7caca</color>
+    <color name="violate">#b8b7d7</color>
+    <color name="sky">#d1cff7</color>
 
 
     <color name="primary">#2196F3</color>

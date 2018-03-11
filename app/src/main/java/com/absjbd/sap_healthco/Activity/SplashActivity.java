@@ -6,15 +6,23 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.absjbd.sap_healthco.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 2000;
+    private static int SPLASH_TIME_OUT = 10000;
+
+    private static int progress;
+    private ProgressBar progressBar;
+    private int progressStatus = 0;
+    private Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +37,43 @@ public class SplashActivity extends AppCompatActivity {
         // Sets the Toolbar to act as the ActionBar for this Activity window.
         // Make sure the toolbar exists in the activity and is not null
         setSupportActionBar(toolbar);
+
+        // initiate the progress bar
+        // 100 maximum value for the progress bar
+        progress = 0;
+        progressBar = (ProgressBar) findViewById(R.id.ProgressBar);
+        progressBar.setMax(200);
+
+        new Thread(new Runnable() {
+            public void run() {
+                while (progressStatus < 200) {
+                    progressStatus = doSomeWork();
+                    handler.post(new Runnable() {
+                        public void run() {
+                            progressBar.setProgress(progressStatus);
+                        }
+                    });
+                }
+                handler.post(new Runnable() {
+                    @SuppressWarnings("WrongConstant")
+                    public void run() {
+                        // ---0 - VISIBLE; 4 - INVISIBLE; 8 - GONE---
+                        progressBar.setVisibility(8);
+                    }
+                });
+            }
+
+            private int doSomeWork() {
+                try {
+                    // ---simulate doing some work---
+                    Thread.sleep(50);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                return ++progress;
+            }
+        }).start();
+
 
         new Handler().postDelayed(new Runnable() {
 
@@ -55,6 +100,8 @@ public class SplashActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_TIME_OUT);
+
+
                 }
 
     }

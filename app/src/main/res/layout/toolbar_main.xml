@@ -18,7 +18,7 @@ android:background="#DDDDDD">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/ic_launcher"/>
+            app:srcCompat="@drawable/medicalicon"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="0dp"
@@ -34,6 +34,10 @@ android:background="#DDDDDD">
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="2.5">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/medicalicon"/>
     </LinearLayout>
 
 </LinearLayout>
