@@ -17,64 +17,62 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import com.absjbd.sap_healthco.Model.DoctorModel;
+import com.absjbd.sap_healthco.Model.HospitaModel;
 import com.absjbd.sap_healthco.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by basha on 3/8/2018.
+ * Created by basha on 3/14/2018.
  */
 
-public class DoctorAdapter extends ArrayAdapter {
+public class HospitalAdapter extends ArrayAdapter {
+
     private static final int REQUEST_CALL = 1;
-    ArrayList<DoctorModel> doctorsList = new ArrayList<>();
+    ArrayList<HospitaModel> hospitalList = new ArrayList<>();
     Context context;
     Intent callIntent;
 
-    public DoctorAdapter(Context context, ArrayList<DoctorModel> doctorsList) {
-        super(context, R.layout.row_doctor, doctorsList);
-        this.doctorsList = doctorsList;
+    public HospitalAdapter(Context context, ArrayList<HospitaModel> hospitalList) {
+        super(context, R.layout.row_hospital, hospitalList);
+        this.hospitalList = hospitalList;
         this.context = context;
+
     }
+
+
 
     @NonNull
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-        /*TODO: most of the things here are similar to SymptomAdapter*/
         LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View myView = inflater.inflate(R.layout.row_doctor, null);
+        View myView = inflater.inflate(R.layout.row_hospital, null);
 
-        TextView doctorNameTV = (TextView) myView.findViewById(R.id.docNameTV);
-        TextView doctorDesignationTV = (TextView)   myView.findViewById(R.id.docDesignationTV);
-        TextView doctorAddressTV = (TextView) myView.findViewById(R.id.docAddressTV);
-        TextView doctorMeetingTimeTV = (TextView) myView.findViewById(R.id.docMeetingTimeTV);
-        TextView doctorPhoneTV = (TextView)   myView.findViewById(R.id.docPhoneTV);
+        TextView hospitalNameTV = (TextView) myView.findViewById(R.id.hosNameTV);
+        TextView hospitalAddressTV = (TextView) myView.findViewById(R.id.hosAddressTV);
+        TextView hospitalPhoneTV = (TextView) myView.findViewById(R.id.hosPhoneTV);
 
-
-        doctorNameTV.setText(doctorsList.get(position).getDoctorName());
-        doctorDesignationTV.setText(doctorsList.get(position).getDoctorDesignation());
-        doctorAddressTV.setText(doctorsList.get(position).getDoctorAddress());
-        doctorMeetingTimeTV.setText(doctorsList.get(position).getDoctorMeetingTime());
-        doctorPhoneTV.setText(doctorsList.get(position).getDoctorPhone());
-        //symptomTv.setText(symptomList.get(position).getSymptom());
-        //dummyTv.setText("Desease No:"+(position+1));
+        hospitalNameTV.setText(hospitalList.get(position).getHospitalName());
+        hospitalAddressTV.setText(hospitalList.get(position).getHospitalAddress());
+        hospitalPhoneTV.setText(hospitalList.get(position).getHospitalPhone());
 
         myView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
                 alertDialogBuilder
-                        .setMessage("আপনি কি " +doctorsList.get(position).getDoctorName() + " কে কল করতে চান?")
-                        .setTitle("কল করুন")
+                        .setMessage("আপনি কি জরুরী কল করতে চান" +
+                                hospitalList.get(position).getHospitalName() +" এ" + " ?")
+                        .setTitle("কল করতে চান ?")
                         .setCancelable(true)
-                        .setPositiveButton("হ্যাঁ",
+                        .setPositiveButton("YES",
                                 new DialogInterface.OnClickListener() {
 
                                     public void onClick(DialogInterface dialog, int id) {
                                         callIntent = new Intent(Intent.ACTION_CALL);
-                                        callIntent.setData(Uri.parse("tel:" + doctorsList.get(position).getDoctorPhone()));
+                                        callIntent.setData(Uri.parse("tel:" + hospitalList.get(position).getHospitalPhone()));
                                         if (ContextCompat.checkSelfPermission(context, android.Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                                             ActivityCompat.requestPermissions((Activity) context, new String[]{android.Manifest.permission.CALL_PHONE}, REQUEST_CALL);
                                         } else {
@@ -83,7 +81,7 @@ public class DoctorAdapter extends ArrayAdapter {
                                     }
                                 });
 
-                alertDialogBuilder.setNegativeButton("না", new DialogInterface.OnClickListener() {
+                alertDialogBuilder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         dialog.cancel();
                         //finish();
@@ -93,6 +91,7 @@ public class DoctorAdapter extends ArrayAdapter {
                 alert.show();
             }
         });
+
 
         return myView;
     }

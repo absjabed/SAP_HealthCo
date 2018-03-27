@@ -16,7 +16,7 @@ import com.absjbd.sap_healthco.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 10000;
+    private static int SPLASH_TIME_OUT = 9350;
 
     private static int progress;
     private ProgressBar progressBar;

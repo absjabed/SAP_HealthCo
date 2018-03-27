@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         fourBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                Intent intent = new Intent(MainActivity.this, EmergencyInfo.class);
                 startActivity(intent);
             }
 
@@ -85,5 +85,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void onClickAboutUs(View view) { //Todo: About Us
+        Intent intent = new Intent(MainActivity.this,AboutUsActivity.class);
+        startActivity(intent);
+    }
 }
 

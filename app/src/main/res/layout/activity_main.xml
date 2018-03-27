@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/violate"
     android:orientation="vertical"
     android:weightSum="10"
+    android:background="@color/icons"
     tools:context="com.absjbd.sap_healthco.Activity.MainActivity">
     <include
         layout="@layout/toolbar_main"
@@ -16,8 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:background="@drawable/countycare"
-        android:layout_weight="3.2">
+        android:background="@drawable/care"
+        android:layout_weight="3">
         <!--<ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -25,13 +26,17 @@
             />-->
 
     </LinearLayout>
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/Pink"
+        android:layout_margin="6dp"
+        android:background="@color/icons"
         android:alpha="0.9"
-        android:layout_weight="5.5">
+        android:layout_weight="5">
 
 
 
@@ -39,17 +44,20 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="4" >
+        android:layout_weight="4"
+        android:layout_margin="5dp">
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/btn_1"
             android:id="@+id/oneBt"
+            android:textStyle="bold"
             android:textSize="25sp"
             android:onClick="oneBt"
-            android:background="@color/Pink"
+            android:background="#C5E2B6"
             android:layout_weight="2"
+            android:layout_margin="5dp"
             />
 
         <Button
@@ -57,70 +65,95 @@
             android:layout_height="match_parent"
             android:id="@+id/twoBt"
             android:text="@string/btn_2"
+            android:textStyle="bold"
             android:textSize="25sp"
             android:onClick="twoBt"
-            android:background="@color/notPink"
-            android:layout_weight="2"/>
+            android:background="#C5E2B6"
+            android:layout_weight="2"
+            android:layout_margin="5dp"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="4" >
+        android:layout_weight="4"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        >
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:id="@+id/threeBt"
             android:text="@string/btn_3"
+            android:textStyle="bold"
             android:textSize="25sp"
-            android:background="@color/notPink"
+            android:background="#C5E2B6"
             android:onClick="threeBt"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:layout_margin="5dp"/>
 
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="@string/btn_4"
             android:id="@+id/fourBt"
+            android:textStyle="bold"
             android:textSize="25sp"
-            android:background="@color/Pink"
+            android:background="#C5E2B6"
             android:onClick="fourBt"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:layout_margin="5dp"/>
     </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        android:layout_weight="1.3">
+        android:layout_weight="2"
+        android:background="@color/icons"
+        android:weightSum="10">
         <ImageView
             android:layout_width="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/actvecityzen"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3.4"
+            android:background="@drawable/actvecityzen"
             />
         <ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/hunger"
-            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/hunger"
+            android:layout_weight="3.2"
             />
         <ImageView
             android:layout_width="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/youth"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3.2"
+            android:background="@drawable/youth"
             />
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="AboutUs"
-            android:textSize="17sp"
-            android:background="@color/bootstrap_brand_danger"
-            android:textStyle="italic"/>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:onClick="onClickAboutUs"
+            app:fabSize="normal"
+            app:srcCompat="@drawable/blue_button_background"
+            android:id="@+id/floatingActionButton"
+            android:layout_weight="1.5"
+            />
         <!--<ImageView
             android:layout_width="0dp"
             android:layout_height="wrap_content"

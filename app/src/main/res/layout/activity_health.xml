@@ -15,10 +15,11 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/tv_1"
         android:textSize="40sp"
         android:gravity="center"
-        android:background="@color/litePink"
+        android:background="#87BB70"
 
         />
 
@@ -26,16 +27,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:weightSum="10">
+        android:weightSum="10"
+        android:background="@color/icons">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="182dp"
+        android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
-        android:background="@color/violate"
+        android:background="#87BB70"
         android:alpha="0.9"
         android:weightSum="10"
         android:layout_weight="5">
@@ -58,10 +60,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:text="@string/btn_5"
+                android:textStyle="bold"
                 android:onClick="FemaleBtnClick"
                 android:id="@+id/fiveBt"
                 android:textSize="30sp"
-                android:background="@color/accent"/>
+                android:background="#C5E2B6"/>
         </LinearLayout>
 
 
@@ -70,23 +73,25 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="219dp"
+        android:layout_height="0dp"
         android:orientation="horizontal"
-        android:background="@color/violate"
+        android:background="#87BB70"
         android:layout_margin="10dp"
         android:layout_marginTop="0dp"
+        android:layout_marginBottom="5dp"
         android:weightSum="10"
         android:alpha="0.9"
         android:layout_weight="5">
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="6"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
             <ImageView
             android:layout_width="match_parent"
             android:layout_gravity="center_vertical"
             android:layout_height="wrap_content"
-            android:src="@drawable/boy"/>
+            android:src="@drawable/mini"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="0dp"
@@ -98,10 +103,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/btn_6"
                 android:onClick="ChildBtnClick"
+                android:textStyle="bold"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/sixBt"
                 android:textSize="30sp"
-                android:background="@color/accent"/>
+                android:background="#C5E2B6"/>
         </LinearLayout>
 
 

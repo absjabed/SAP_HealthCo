@@ -20,19 +20,20 @@
 
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tv_2"
-            android:textSize="35sp"
-            android:background="@color/error_stroke_color"
-            android:gravity="center"
-            />
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tv_2"
+                android:textSize="35sp"
+                android:background="#87BB70"
+                android:gravity="center"
+                android:id="@+id/symptomTv"
+                />
 
         </LinearLayout>
         <LinearLayout
@@ -44,7 +45,7 @@
             <ListView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/women_diseaseLV"
+                android:id="@+id/female_diseaseLV"
                 android:layout_weight="8">
 
             </ListView>

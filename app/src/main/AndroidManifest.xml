@@ -20,13 +20,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".Activity.HealthActivity" />
         <activity android:name=".Activity.HospitalActivity" />
         <activity android:name=".Activity.DoctorActivity" />
         <activity android:name=".Activity.InfoActivity" />
         <activity android:name=".Activity.DiseaseActivity" />
         <activity android:name=".Activity.ChildDiseaseActivity" />
+        <activity android:name=".Activity.EmergencyInfo" />
+        <activity android:name=".Activity.AboutUsActivity"></activity>
     </application>
 
 </manifest>

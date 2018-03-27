@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.absjbd.sap_healthco.Adapter.DoctorAdapter;
 import com.absjbd.sap_healthco.Adapter.DoctorManager;
@@ -46,27 +47,143 @@ public class DoctorActivity extends AppCompatActivity {
 
         if(docTypeInt== Constants.CHILD_DENGUE){
             //gets dengue doctor
-            doctors = manager.getDengueDoctors();
+            doctors = manager.getChildDiseasesDoctors();
             DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
             doctorListView.setAdapter(myAdapter);
         }else if(docTypeInt== Constants.CHILD_PNEUMONIA){
-            //different doctor list
-            doctors = manager.getPneumoniaDoctors();
+            //different doctor এতlist
+            doctors = manager.getChildDiseasesDoctors();
             DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
             doctorListView.setAdapter(myAdapter);
         }else if(docTypeInt== Constants.CHILD_MAL_NUTRITION){
             //different doctor list
-            doctors = manager.getNutritionDoctors();
+            doctors = manager.getChildDiseasesDoctors();
             DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
             doctorListView.setAdapter(myAdapter);
         }else if(docTypeInt== Constants.CHILD_DIAHOREA){
             //different doctor list
-            doctors = manager.getDiahoreaDoctors();
+            doctors = manager.getChildDiseasesDoctors();
             DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
             doctorListView.setAdapter(myAdapter);
         }else if(docTypeInt== Constants.CHILD_MALARIA){
             //different doctor list
-            doctors = manager.getMalariaDoctors();
+            doctors = manager.getChildDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no1){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no2){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no3){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no4){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no5){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no6){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no7){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no8){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no9){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no10){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no11){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            Toast.makeText(this, "doctypeInt: "+docTypeInt+" Const: "+Constants.FEMALE_DESEASES_no5, Toast.LENGTH_SHORT).show();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no12){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no13){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no14){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no15){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no16){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no17){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no18){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no19){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no20){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
+            DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
+            doctorListView.setAdapter(myAdapter);
+        }else if(docTypeInt== Constants.FEMALE_DESEASES_no21){
+            //different doctor list
+            doctors = manager.getFemaleDiseasesDoctors();
             DoctorAdapter myAdapter = new DoctorAdapter(this,doctors);
             doctorListView.setAdapter(myAdapter);
         }else{

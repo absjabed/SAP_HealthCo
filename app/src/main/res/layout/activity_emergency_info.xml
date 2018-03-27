@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_emergency_info"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.absjbd.sap_healthco.Activity.EmergencyInfo">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"/>
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        app:bootstrapBrand="regular"
+        android:layout_marginTop="1dp"
+        android:text="\nজরুরী নাম্বার সমূহ\n"
+        android:layout_height="wrap_content" />
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        app:bootstrapBrand="primary"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickCmc"
+        android:text="\nজাতীয় জরুরী সহায়তা নাম্বার \nফোনঃ ৯৯৯\n"
+        android:layout_height="wrap_content" />
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        app:bootstrapBrand="danger"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickNationalHotline"
+        android:text="\nচট্টগ্রাম মেডিকেল কলেজ জরুরী বিভাগ\nফোনঃ ০৩১-৬১৯৫৯৭\n"
+        android:layout_height="wrap_content" />
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        app:bootstrapBrand="danger"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickBloodBank"
+        android:text="\nফাতেমা বেগম রেড ক্রিসেন্ট ব্লাড সেন্টার \nফোনঃ ০৩১-৬১২৩৯৫\n"
+        android:layout_height="wrap_content" />
+
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        app:bootstrapBrand="danger"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickBloodBankTwo"
+        android:text="ল্যান্ডস্টেনার ব্লাড ব্যাংক এবং ট্রান্সফিউশন মেডিসিন সেন্টার \nফোনঃ ০১৮৫৭-৫২৯৯৯৮"
+        android:layout_height="wrap_content" />
+    <com.beardedhen.androidbootstrap.BootstrapLabel
+        android:layout_width="match_parent"
+        app:bootstrapBrand="danger"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickBloodBankThree"
+        android:text="B4ALL \nফোনঃ ০১৬২৫-৫২৪২৫৫
+        "
+        android:layout_height="wrap_content" />
+</LinearLayout>
